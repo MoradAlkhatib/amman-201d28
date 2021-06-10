@@ -60,9 +60,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b, c) { 
-  let sum3=sum(a+b)+c;
-  let mul3=multiply(a*b)*c;
-  
+  let sum3=a+b+c;
+  let mul3=a*b*c;
   return[sum3,mul3,`${a} and ${b} and ${c} sum to ${sum3}.`,`The product of ${a} and ${b} and ${c} is ${mul3}.`];
 
 }
