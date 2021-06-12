@@ -91,13 +91,12 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { 
   
-  let sum=0;
-  for(var i=0;i<sumArr.length;i++)
-  {  
-    sum+=sumArr[i];
-  }
-  
-  return [sum,`${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum} is their sum.`];
+  let a = testArray[0];
+  let b = testArray[1];
+  let c = testArray[2];
+  let total = sum(a, b)[0];
+  let total2 = sum(total,c)[0];
+  return[total2,`${a},${b},${c} was passed in as an array of numbers, and ${total2} is their sum.`]
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -122,12 +121,13 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { 
   
-  let mul=1;
-  for(var i=0;i<multArr.length;i++)
-  {  
-    mul*=multArr[i];
-  }
-   return [mul,`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${mul}.`]
+  let multiply2;
+  let multiply3;
+  multiply2= multiply ( multArr[0],multArr[1]);
+  multiply3= multiply (multiply2[0], multArr[2]);
+
+
+return[multiply3[0],`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multiply3[0]}.`];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
