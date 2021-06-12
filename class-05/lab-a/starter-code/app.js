@@ -91,13 +91,12 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { 
   
-  let sum=0;
-  for(var i=0;i<sumArr.length;i++)
-  {  
-    sum+=sumArr[i];
-  }
-  
-  return [sum,`${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum} is their sum.`];
+  let a = testArray[0];
+  let b = testArray[1];
+  let c = testArray[2];
+  let total = sum(a, b)[0];
+  let total2 = sum(total,c)[0];
+  return[total2,`${a},${b},${c} was passed in as an array of numbers, and ${total2} is their sum.`]
 }
 
 // Here is the test for sumArray(); uncomment it to run it
