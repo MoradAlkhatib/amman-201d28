@@ -121,12 +121,13 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { 
   
-  let mul=1;
-  for(var i=0;i<multArr.length;i++)
-  {  
-    mul*=multArr[i];
-  }
-   return [mul,`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${mul}.`]
+  let multiply2;
+  let multiply3;
+  multiply2= multiply ( multArr[0],multArr[1]);
+  multiply3= multiply (multiply2[0], multArr[2]);
+
+
+return[multiply3[0],`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multiply3[0]}.`];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
